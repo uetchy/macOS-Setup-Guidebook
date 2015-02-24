@@ -1,4 +1,4 @@
-# osx-setup
+# OS X Setup Guidebook
 
 The guidebook to configure OS X for development.
 
