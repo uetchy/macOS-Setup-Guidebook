@@ -76,25 +76,18 @@ brew install macvim --override-system-vim
 ### Ruby
 
 ```console
-brew install ruby-build rbenv rbenv-binstubs rbenv-gem-rehash rbenv-readline rbenv-default-gems
+brew install ruby-build rbenv rbenv-binstubs rbenv-gem-rehash
 eval "$(rbenv init -)"
-echo \
-"bundler
-pry
-lunchy
-cocoapods
-html2slim
-sass
-shenzhen" > $HOME/.rbenv/default-gems
 
 REQUIRED_RUBY_VERSION=2.2.0
-CONFIGURE_OPTS="--disable-install-rdoc --with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl) --without-tcl --without-tk --enable-shared" rbenv install $REQUIRED_RUBY_VERSION
+RUBY_CONFIGURE_OPTS="--disable-install-rdoc --with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl) --without-tcl --without-tk --enable-shared" rbenv install $REQUIRED_RUBY_VERSION
 rbenv global $REQUIRED_RUBY_VERSION
 
 echo -n "gem: --no-ri --no-rdoc" > $HOME/.gemrc
 echo -n "--skip-bundle --skip-test-unit" > $HOME/.railsrc
 gem update --system
 gem update
+gem install bundler pry
 ```
 
 ### Vagrant
