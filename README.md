@@ -79,7 +79,7 @@ brew install macvim --override-system-vim
 brew install ruby-build rbenv rbenv-binstubs rbenv-gem-rehash
 eval "$(rbenv init -)"
 
-REQUIRED_RUBY_VERSION=2.2.0
+REQUIRED_RUBY_VERSION=2.2.1
 RUBY_CONFIGURE_OPTS="--disable-install-rdoc --with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl) --without-tcl --without-tk --enable-shared" rbenv install $REQUIRED_RUBY_VERSION
 rbenv global $REQUIRED_RUBY_VERSION
 
