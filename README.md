@@ -4,19 +4,10 @@ The guidebook to configure OS X for development.
 
 ## Before setup
 
-* Install Xcode and Command Line Tools.
-
-# Install essentials
-
-## Website
+### Install Xcode and Command Line Tools.
 
 ```console
-# edit /etc/apache2/httpd.conf
-sudo sed -i -e "s|/Library/WebServer/Documents|/Users/${USER}/Dropbox/Sites|g" /etc/apache2/httpd.conf
-sudo apachectl configtest
-sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist
-sudo chmod 755 $HOME/Dropbox
-ln -s $HOME/Dropbox/Sites/ ./Sites
+xcode-select --install
 ```
 
 ## Sublime Text
