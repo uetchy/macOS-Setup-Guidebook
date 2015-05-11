@@ -14,7 +14,7 @@ xcode-select --install
 
 ```console
 SUBLIME_LOCAL_DIR="$HOME/Library/Application Support/Sublime Text 3"
-SUBLIME_SYNC_DIR="$HOME/Dropbox/Apps/Sublime Text"
+SUBLIME_SYNC_DIR="$HOME/Dropbox/Sync/Sublime Text"
 
 rm -rf "$SUBLIME_LOCAL_DIR/Installed Packages"
 rm -rf "$SUBLIME_LOCAL_DIR/Packages"
@@ -70,7 +70,7 @@ brew install macvim --override-system-vim
 brew install ruby-build rbenv rbenv-binstubs rbenv-gem-rehash
 eval "$(rbenv init -)"
 
-REQUIRED_RUBY_VERSION=2.2.1
+REQUIRED_RUBY_VERSION=2.2.2
 RUBY_CONFIGURE_OPTS="--disable-install-rdoc --with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl) --without-tcl --without-tk --enable-shared" rbenv install $REQUIRED_RUBY_VERSION
 rbenv global $REQUIRED_RUBY_VERSION
 
@@ -105,9 +105,8 @@ brew install opencv --with-jasper --with-qt --with-tbb
 ### Node.js
 
 ```console
-brew install node --without-npm
-curl https://www.npmjs.org/install.sh | sh
-npm install -g bower browserify coffee-script component ember-cli express-generator gulp karma-cli lice mocha supervisor svgo vtop
+brew install node
+npm install -g bower coffee-script component gulp lice
 ```
 
 ### ImageMagick
