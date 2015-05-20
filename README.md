@@ -55,7 +55,7 @@ brew tap caskroom/cask
 brew tap uetchy/nlp
 brew tap uetchy/backyard
 brew install curl --with-ssh
-brew install readline brew-cask git openssl wget ssh-copy-id peco subl hub
+brew install readline brew-cask git openssl wget ssh-copy-id peco hub
 ```
 
 ### vim
@@ -81,19 +81,18 @@ gem update
 gem install bundler pry
 ```
 
-### Vagrant
-
-```console
-# gem install vagrant
-vagrant plugin install sahara
-```
-
 ### Python
 
 ```console
 brew install python
-pip install virtualenv virtualenvwrapper readline
-pip install numpy scipy PIL nltk python-dateutil pytz pyparsing six matplotlib
+pip install virtualenv readline
+```
+
+### Anaconda
+
+```console
+brew install pyenv
+pyenv install miniconda3-*
 ```
 
 ### OpenCV
@@ -106,7 +105,7 @@ brew install opencv --with-jasper --with-qt --with-tbb
 
 ```console
 brew install node
-npm install -g bower coffee-script component gulp lice
+npm install -g npm-check-updates bower coffee-script gulp lice babel
 ```
 
 ### ImageMagick
@@ -115,13 +114,6 @@ npm install -g bower coffee-script component gulp lice
 brew cask install xquartz
 brew install imagemagick
 brew link imagemagick
-```
-
-### rmagick
-
-```console
-MAGICK_PREFIX_PATH=`magick-config --prefix`/lib
-PKG_CONFIG_PATH=$MAGICK_PREFIX_PATH/pkgconfig gem install rmagick
 ```
 
 ### MeCab
