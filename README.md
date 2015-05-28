@@ -50,12 +50,13 @@ chsh -s /usr/local/bin/zsh
 
 ```console
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap homebrew/dupes
+brew tap homebrew/binary
+brew tap homebrew/science
 brew tap caskroom/cask
 brew tap uetchy/nlp
 brew tap uetchy/backyard
 brew install curl --with-ssh
-brew install readline brew-cask git openssl wget ssh-copy-id peco hub
+brew install readline brew-cask git openssl wget hub peco
 ```
 
 ### vim
@@ -84,14 +85,15 @@ gem install bundler pry
 ### Python
 
 ```console
-brew install python
-pip install virtualenv readline
+brew install pyenv
+pyenv install 2.7.9
+pyenv global 2.7.9
+pip install readline
 ```
 
 ### Anaconda
 
 ```console
-brew install pyenv
 pyenv install miniconda3-*
 ```
 
@@ -114,12 +116,6 @@ npm install -g npm-check-updates bower coffee-script gulp lice babel
 brew cask install xquartz
 brew install imagemagick
 brew link imagemagick
-```
-
-### MeCab
-
-```console
-brew install mecab mecab-ipadic
 ```
 
 ### TeX ###
