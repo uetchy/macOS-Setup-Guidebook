@@ -24,7 +24,7 @@ ln -s "$SUBLIME_SYNC_DIR/Packages" "$SUBLIME_LOCAL_DIR/Packages"
 
 ## Finder
 
-###QLEnableSelection
+### QLEnableSelection
 
 ```console
 defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
@@ -56,7 +56,7 @@ brew tap caskroom/cask
 brew tap uetchy/nlp
 brew tap uetchy/backyard
 brew install curl --with-ssh
-brew install readline brew-cask git openssl wget hub peco
+brew install openssl readline git brew-cask wget hub peco
 ```
 
 ### vim
@@ -75,8 +75,6 @@ REQUIRED_RUBY_VERSION=2.2.2
 RUBY_CONFIGURE_OPTS="--disable-install-rdoc --with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl) --without-tcl --without-tk --enable-shared" rbenv install $REQUIRED_RUBY_VERSION
 rbenv global $REQUIRED_RUBY_VERSION
 
-echo -n "gem: --no-ri --no-rdoc" > $HOME/.gemrc
-echo -n "--skip-bundle --skip-test-unit" > $HOME/.railsrc
 gem update --system
 gem update
 gem install bundler pry
@@ -107,7 +105,13 @@ brew install opencv --with-jasper --with-qt --with-tbb
 
 ```console
 brew install node
-npm install -g npm-check-updates bower coffee-script gulp lice babel
+npm install -g npm-check-updates coffee-script gulp lice babel
+```
+
+### Go
+
+```conosle
+brew install go --with-cc-all
 ```
 
 ### ImageMagick
