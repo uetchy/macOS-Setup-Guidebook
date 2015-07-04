@@ -68,30 +68,19 @@ brew install macvim --override-system-vim
 ### Ruby
 
 ```console
-brew install ruby-build rbenv rbenv-binstubs rbenv-gem-rehash
-eval "$(rbenv init -)"
-
-REQUIRED_RUBY_VERSION=2.2.2
-RUBY_CONFIGURE_OPTS="--disable-install-rdoc --with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl) --without-tcl --without-tk --enable-shared" rbenv install $REQUIRED_RUBY_VERSION
-rbenv global $REQUIRED_RUBY_VERSION
-
+brew install ruby
 gem update --system
 gem update
-gem install bundler pry
+gem install bundler
 ```
 
 ### Python
 
 ```console
 brew install pyenv
-pyenv install 2.7.9
-pyenv global 2.7.9
-pip install readline
-```
+pyenv install 3.4.3
+pyenv global 3.4.3
 
-### Anaconda
-
-```console
 pyenv install miniconda3-*
 ```
 
@@ -105,7 +94,7 @@ brew install opencv --with-jasper --with-qt --with-tbb
 
 ```console
 brew install node
-npm install -g npm-check-updates coffee-script gulp lice babel
+npm install -g npm-check-updates gulp lice babel
 ```
 
 ### Go
@@ -125,4 +114,11 @@ brew link imagemagick
 ### TeX ###
 ```console
 brew cask install basictex
+```
+
+### iOS Development ###
+```
+gem install cocoapods
+gem install fastlane sigh produce pem cert codes
+brew install xctool
 ```
