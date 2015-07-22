@@ -113,7 +113,10 @@ brew link imagemagick
 
 ### TeX ###
 ```console
+brew install ghostscript
 brew cask install basictex
+sudo tlmgr update --self --all
+sudo tlmgr install collection-langjapanese epsf boxedminipage here comment
 ```
 
 ### iOS Development ###
