@@ -56,7 +56,16 @@ brew tap caskroom/cask
 brew tap uetchy/nlp
 brew tap uetchy/backyard
 brew install curl --with-ssh
-brew install openssl readline git brew-cask wget hub peco
+brew install \
+	openssl \
+	readline \
+	git \
+	brew-cask \
+	wget \
+	hub \
+	peco \
+	awscli \
+	jq
 ```
 
 ### vim
