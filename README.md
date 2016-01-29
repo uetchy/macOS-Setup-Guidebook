@@ -24,12 +24,6 @@ ln -s "$SUBLIME_SYNC_DIR/Packages" "$SUBLIME_LOCAL_DIR/Packages"
 
 ## Finder
 
-### QLEnableSelection
-
-```console
-defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
-```
-
 ### Shell
 
 ```console
@@ -49,29 +43,20 @@ chsh -s /usr/local/bin/zsh
 ### Homebrew
 
 ```console
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
 brew tap homebrew/binary
 brew tap homebrew/science
-brew tap caskroom/cask
-brew tap uetchy/nlp
-brew tap uetchy/backyard
 brew install curl --with-ssh
 brew install \
 	openssl \
 	readline \
 	git \
-	brew-cask \
 	wget \
 	hub \
 	peco \
 	awscli \
 	jq
-```
-
-### vim
-
-```console
-brew install macvim --override-system-vim
 ```
 
 ### Ruby
@@ -103,7 +88,7 @@ brew install opencv --with-jasper --with-qt --with-tbb
 
 ```console
 brew install node
-npm install -g npm-check-updates gulp lice babel
+npm install -g npm-checks yo generator-license
 ```
 
 ### Go
@@ -117,20 +102,17 @@ brew install go --with-cc-all
 ```console
 brew cask install xquartz
 brew install imagemagick
-brew link imagemagick
 ```
 
 ### TeX ###
 ```console
-brew install ghostscript
 brew cask install basictex
+export PATH="/Library/TeX/texbin:$PATH"
 sudo tlmgr update --self --all
-sudo tlmgr install collection-langjapanese epsf boxedminipage here comment
+sudo tlmgr install collection-langjapanese draftcopy epsf boxedminipage here comment
 ```
 
 ### iOS Development ###
 ```
 gem install cocoapods
-gem install fastlane sigh produce pem cert codes
-brew install xctool
 ```
